@@ -26,3 +26,5 @@ Documentation for Verasol
 This suite of scripts is designed to take the individual product testing results and consolidate them as an Rdata object. This Rdata object can be used as a pseudo-database for broader analysis.
 
 ## Quick Instructions
+Currently, script must be implemented in an R instance (RStudio is ideal, but if you are comfortable with the base R GUI, that works as well). In the future, this may be updated to operate as a command line tool.
+
