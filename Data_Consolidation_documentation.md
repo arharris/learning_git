@@ -39,3 +39,9 @@ There are a few places where consolidate_data_exports.R relies hard-coded file p
 3. In the next section, labeled "CREATE A LABS LIST", the variable "labs.on.file" is pointed to file "labs.csv".
 
 Make sure the file paths are relevant to your computer, and update them if necessary. NOTE: On computers running Windows, file paths are frequently shown with forward slashes ("\") as opposed to back slashes ("/"). In many programming languages, including R, forward slashes are used as an "escape character" (which tells the machine to ignore the next character) or in formatting (for example, "\n" means "start a new line"). So, be sure to use back slashes in your file paths.
+
+### 3. Run the code
+If you are using the R GUI, you will need to copy and paste the code into the console and hit 'Enter'. In RStudio, you can either use the copy/paste method, or select all text in script, and hit the "Run" button at the top of the file window.
+
+### 4. Check back periodically to make sure the script is running smoothly
+Depending on how many new reports are in the data export directory, the script may take a while to fully run. Occasionally, the script will crash - sometimes because of a faulty data export, and sometimes because, to quote Joseph Campbell, "*Computers are like Old Testament gods: lots of rules and no mercy.*" (Or, to put it another way, "Sometimes the machine just hates you.")
