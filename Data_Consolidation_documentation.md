@@ -18,7 +18,7 @@ Detail the necessary inputs to run the software. This could be input files, vari
 ## Outputs
 Detail the expected output of the software, and if necessary, any additiuonal information needed to interpret or use these outputs.
 
-## Common Torubleshooting
+## Common Troubleshooting
 If common, relatively easy troubleshooting issues ahve been identified in the development and testing of code, detail that here. Depending on the software and the complexity involved, this may not be relevant for all software.
 
 Documentation for Verasol
@@ -44,4 +44,16 @@ Make sure the file paths are relevant to your computer, and update them if neces
 If you are using the R GUI, you will need to copy and paste the code into the console and hit 'Enter'. In RStudio, you can either use the copy/paste method, or select all text in script, and hit the "Run" button at the top of the file window.
 
 ### 4. Check back periodically to make sure the script is running smoothly
-Depending on how many new reports are in the data export directory, the script may take a while to fully run. Occasionally, the script will crash - sometimes because of a faulty data export, and sometimes because, to quote Joseph Campbell, "*Computers are like Old Testament gods: lots of rules and no mercy.*" (Or, to put it another way, "Sometimes the machine just hates you.")
+Depending on how many new reports are in the data export directory, the script may take a while to fully run - you should see the names of data export directories printing to the console screen as the script progresses. Occasionally, the script will crash - sometimes because of a faulty data export, and sometimes because, to quote Joseph Campbell, "*Computers are like Old Testament gods: lots of rules and no mercy.*" (Or, to put it another way, "Sometimes the machine just hates you.") If this happens, don't panic - the script periodically saves progress, so not much has been lost. Find the most recently processed directory (this will be the last directory name printed to the screen), review the directory's data to check for errors (see the Troubleshooting guide), and then restart the script.
+
+## Detailed Instructions
+I don't think there is a need for more detailed instructions; the're currently not a lot of variation in how this script will be used. Keep as a template example ("Here's a script where detailed descriptions would not be used!") but delete from the readme.
+
+## Inputs
+
+
+## Outputs
+
+
+## Common Troubleshooting
+
