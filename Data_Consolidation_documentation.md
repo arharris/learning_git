@@ -61,6 +61,7 @@ I don't think there is a need for more detailed instructions; the're currently n
 This means that the error was not caused by a problematic data export directory, so the problem is somewhere in the script. Here are some common causes:
 
 #### A file path is incorrect (make sound pretty below)
+If you get an error message reading "No such file or directory," the most likely culprit is a bad file path. Check the file name specified, 
 If the file path is not obviously wrong, Check if it is a relative or absolute filepath; may need to manually set a working directory
 
 #### If a function cannot be found (Again, make sound pretty)
