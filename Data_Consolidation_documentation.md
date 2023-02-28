@@ -57,3 +57,11 @@ I don't think there is a need for more detailed instructions; the're currently n
 
 ## Common Troubleshooting
 
+### If the script crashes *before* the data export directory names are printed
+This means that the error was not caused by a problematic data export directory, so the problem is somewhere in the script. Here are some common causes:
+
+#### A file path is incorrect (make sound pretty below)
+If the file path is not obviously wrong, Check if it is a relative or absolute filepath; may need to manually set a working directory
+
+#### If a function cannot be found (Again, make sound pretty)
+Either one of the companion scripts (consolidate_data_exports_functions.R, generic_functions.R) didn't load, or the library in question didn't load properly. That either requires a specific load of the package, or the package is no longer supported, which is a much bigger problem.
