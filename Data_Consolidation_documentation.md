@@ -56,13 +56,31 @@ I don't think there is a need for more detailed instructions; the're currently n
 
 
 ## Common Troubleshooting
+Below are some troubleshooting techniques for common errors. Additional investigation may be required to find and fix certain issues.
 
 ### If the script crashes *before* the data export directory names are printed
 This means that the error was not caused by a problematic data export directory, so the problem is somewhere in the script. Here are some common causes:
 
-#### A file path is incorrect (make sound pretty below)
-If you get an error message reading "No such file or directory," the most likely culprit is a bad file path. Check the file name specified, 
-If the file path is not obviously wrong, Check if it is a relative or absolute filepath; may need to manually set a working directory
+#### A file path is incorrect
+If you get an error message reading "No such file or directory," the most likely culprit is a bad file path. Check the file name specified - you may also want to check any files paths stored in variables (i.e. "main.dir", "output.file.dir") to makesure there are no errors. If the issue persists, more detailed invrstigation will be needed.
 
 #### If a function cannot be found (Again, make sound pretty)
-Either one of the companion scripts (consolidate_data_exports_functions.R, generic_functions.R) didn't load, or the library in question didn't load properly. That either requires a specific load of the package, or the package is no longer supported, which is a much bigger problem.
+If you get an error message reading "could not find function," this means that R does not recognize a called function. There are a few common causes:
+
+##### 1. A module script didn't load properly
+To keep the data consolidation script clean, many functions are contained in two separate module scripts: "consolidate_data_exports_functions.R" and "generic_functions.R". If either of these scripts did not load properly (this would be the first two lines of non-commented code, the "source" command), then thid error might happen. Check the file paths on the source commands.
+
+##### 2. A library didn't load properly
+If a library doesn't load properly, any functions within the library will be unavailable. Try running the appropriate load.libraries command again, otherwise more investigation might be needed.
+
+##### 3. It wasn't meant to be a function
+Functions in R are denoted by character strings followed by parentheses (for example, "list.files()"), whereas a specific index within a data structure (such as arrays, lists, and vectors) are denoted by character strings followed by brackets (for example, "test.results[1]"). So if parentheses are used instead of brackets on am R data structure, you will get a "could not find function" error.
+
+### If the script crashes *after* data export directory names are printed
+A data export might be faulty. Check for last directory printed for errors (the most common culprits are listed below), fix any identified issues, and re-run the script. NOTE: Sometimes there is no problem with the data export, the script just crashed (This would be the "machine just hates you" case referenced earlier). If you cannot find an error in the data export, re-run the script, and see if the issue persists.
+
+#### Numbers as dates
+Before data exports were data exports, they were Excel spreadsheets - and if the wrong column was formatted as a date, then you may find yourself with a value of "Jan. 1, 1900" where you expected to see a 1. Not surprisingly, this leads to issues when trying to perform any numerical analysis, and will likely crash the script. To fix this issue, you will either need to go back to the original spreadsheet, fix the formatting, and re-export, or if that is not possible, remove the offending data export and report to the broader team what happened.
+
+#### Numbers as characters
+Occasonally, numeric values are read as character strings instead of numbers - a leading space or a quotation mark are common culprits. This will also cause issues when performing numerical analysis. If you can remove any unwanted, non-numeric characters, the value should read as numeric on the next run.
