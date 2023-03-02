@@ -53,7 +53,17 @@ I don't think there is a need for more detailed instructions; the're currently n
 
 
 ## Outputs
+### vbd.Rdata
+The only output of this script is a Rdata file named "vdb.Rdata". This contains an r list object, "lighting.global.database", that will contain all product data in the data export after the script has been run.
+#### Data Structure of lighting.global.database
+lighting.global.database is an R list, with a list entry for each test Verasol performs on off-grid lighting products. Each list entry is an R data table object, containing all records for the given test, and can be accessed with the following R command:
 
+lighting.global.database[['<test name<Sometimes Markdown is dumb>>']]
+
+For example:
+lighting.global.database[['Battery']]
+
+The columns of each test-specific data table are directly taken from the test report spreadsheet, 
 
 ## Common Troubleshooting
 Below are some troubleshooting techniques for common errors. Additional investigation may be required to find and fix certain issues.
