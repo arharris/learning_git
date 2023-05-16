@@ -16,7 +16,7 @@ If the software merits it, here's where we have a more detailed set of instructi
 Detail the necessary inputs to run the software. This could be input files, variable parameters that must be entered, or some other input to the program. Input file structure should be explained.
 
 ## Outputs
-Detail the expected output of the software, and if necessary, any additiuonal information needed to interpret or use these outputs.
+Detail the expected output of the software, and if necessary, any additional information needed to interpret or use these outputs.
 
 ## Common Troubleshooting
 If common, relatively easy troubleshooting issues ahve been identified in the development and testing of code, detail that here. Depending on the software and the complexity involved, this may not be relevant for all software.
@@ -44,13 +44,38 @@ Make sure the file paths are relevant to your computer, and update them if neces
 If you are using the R GUI, you will need to copy and paste the code into the console and hit 'Enter'. In RStudio, you can either use the copy/paste method, or select all text in script, and hit the "Run" button at the top of the file window.
 
 ### 4. Check back periodically to make sure the script is running smoothly
-Depending on how many new reports are in the data export directory, the script may take a while to fully run - you should see the names of data export directories printing to the console screen as the script progresses. Occasionally, the script will crash - sometimes because of a faulty data export, and sometimes because, to quote Joseph Campbell, "*Computers are like Old Testament gods: lots of rules and no mercy.*" (Or, to put it another way, "Sometimes the machine just hates you.") If this happens, don't panic - the script periodically saves progress, so not much has been lost. Find the most recently processed directory (this will be the last directory name printed to the screen), review the directory's data to check for errors (see the Troubleshooting guide), and then restart the script.
+Depending on how many new reports are in the data export directory, the script may take a while to fully run - you should see the names of data export directories printing to the console screen as the script progresses. Occasionally, the script will crash - sometimes because of a faulty data export, and sometimes because the machine just hates you. If this happens, don't panic - the script periodically saves progress, so not much has been lost. Find the most recently processed directory (this will be the last directory name printed to the screen), review the directory's data to check for errors (see the Troubleshooting guide), and then restart the script.
 
 ## Detailed Instructions
 I don't think there is a need for more detailed instructions; the're currently not a lot of variation in how this script will be used. Keep as a template example ("Here's a script where detailed descriptions would not be used!") but delete from the readme.
 
 ## Inputs
-
+The only inputs required for this software are the test report export files. Below is the expected directory structure for several products:
+<pre>
+├── All_Data_Exports
+|   ├── PICO_SMQ_AR_ShenzhenSolarRunSR25Components_11132019
+|   |   ├── BatteryExport
+|   |   |   ├── ExportData.csv
+|   |   ├── VisualScreeningExport
+|   |   |   ├── BatteryInfo.csv
+|   |   |   ├── BatteryInspection.csv
+|   |   |   ├── Components.csv
+|   ├── PICO_SMQ_QTM_Flexiway_SolarMuscleFlex_10112015
+|   |   ├── BatteryExport
+|   |   |   ├── BatteryExportData.csv
+|   |   ├── VisualScreeningExport
+|   |   |   ├── VisualScreeningExportData.csv
+|   ├── PICO_LRC_QTM_Barefoot_FireflyMobile_15072012
+|   |   ├── BatteryExport
+|   |   |   ├── BatteryExportData.csv
+|   |   ├── ExternalScreen1Export
+|   |   |   ├── ExternalScreen1ExportData.csv
+|   |   ├── ExternalScreen2Export
+|   |   |   ├── ExternalScreen2Export1Data.csv
+|   |   |   ├── ExternalScreen2Export2Data.csv
+|   |   |   ├── ExternalScreen2Export3Data.csv
+</pre>
+As the test report template has changed over time, there have been minor changes in the file naming scheme. The software has been coded to account for those differences, so it is not necessary to change the names of specific test directories (e.g. "BatteryExport") or export files (e.g. "ExportData.csv").
 
 ## Outputs
 ### vbd.Rdata
