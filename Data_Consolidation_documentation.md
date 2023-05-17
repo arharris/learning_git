@@ -22,9 +22,6 @@ If you are using the R GUI, you will need to copy and paste the code into the co
 ### 4. Check back periodically to make sure the script is running smoothly
 Depending on how many new reports are in the data export directory, the script may take a while to fully run - you should see the names of data export directories printing to the console screen as the script progresses. Occasionally, the script will crash - sometimes because of a faulty data export, and sometimes because the machine just hates you. If this happens, don't panic - the script periodically saves progress, so not much has been lost. Find the most recently processed directory (this will be the last directory name printed to the screen), review the directory's data to check for errors (see the Troubleshooting guide), and then restart the script.
 
-## Detailed Instructions
-I don't think there is a need for more detailed instructions; the're currently not a lot of variation in how this script will be used. Keep as a template example ("Here's a script where detailed descriptions would not be used!") but delete from the readme.
-
 ## Inputs
 The only inputs required for this software are the test report export files. Below is the expected directory structure for several products:
 <pre>
