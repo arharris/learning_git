@@ -38,7 +38,7 @@ There are a few places where consolidate_data_exports.R relies hard-coded file p
 2. In the next section, labeled "COMMAND LINE OPTIONS", the variables "main.dir" and "output.file.dir" point to the "All_Data_Exports" and "Verasol Data Analysis" directories, respectively. 
 3. In the next section, labeled "CREATE A LABS LIST", the variable "labs.on.file" is pointed to file "labs.csv".
 
-Make sure the file paths are relevant to your computer, and update them if necessary. NOTE: On computers running Windows, file paths are frequently shown with forward slashes ("\") as opposed to back slashes ("/"). In many programming languages, including R, forward slashes are used as an "escape character" (which tells the machine to ignore the next character) or in formatting (for example, "\n" means "start a new line"). So, be sure to use back slashes in your file paths.
+Make sure the file paths are relevant to your computer, and update them if necessary. NOTE: On computers running Windows, file paths are frequently shown with forward slashes ("\\") as opposed to back slashes ("/"). In many programming languages, including R, forward slashes are used as an "escape character" (which tells the machine to ignore the next character) or in formatting (for example, "\n" means "start a new line"). So, be sure to use back slashes in your file paths.
 
 ### 3. Run the code
 If you are using the R GUI, you will need to copy and paste the code into the console and hit 'Enter'. In RStudio, you can either use the copy/paste method, or select all text in script, and hit the "Run" button at the top of the file window.
@@ -99,7 +99,7 @@ This means that the error was not caused by a problematic data export directory,
 #### A file path is incorrect
 If you get an error message reading "No such file or directory," the most likely culprit is a bad file path. Check the file name specified - you may also want to check any files paths stored in variables (i.e. "main.dir", "output.file.dir") to makesure there are no errors. If the issue persists, more detailed invrstigation will be needed.
 
-#### If a function cannot be found (Again, make sound pretty)
+#### Function not found 
 If you get an error message reading "could not find function," this means that R does not recognize a called function. There are a few common causes:
 
 ##### 1. A module script didn't load properly
@@ -108,7 +108,7 @@ To keep the data consolidation script clean, many functions are contained in two
 ##### 2. A library didn't load properly
 If a library doesn't load properly, any functions within the library will be unavailable. Try running the appropriate load.libraries command again, otherwise more investigation might be needed.
 
-##### 3. It wasn't meant to be a function
+##### 3. Using parentheses instead of brackets
 Functions in R are denoted by character strings followed by parentheses (for example, "list.files()"), whereas a specific index within a data structure (such as arrays, lists, and vectors) are denoted by character strings followed by brackets (for example, "test.results[1]"). So if parentheses are used instead of brackets on am R data structure, you will get a "could not find function" error.
 
 ### If the script crashes *after* data export directory names are printed
