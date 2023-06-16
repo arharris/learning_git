@@ -82,7 +82,28 @@ To keep the data consolidation script clean, many functions are contained in two
 If a library doesn't load properly, any functions within the library will be unavailable. Try running the appropriate load.libraries command again, otherwise more investigation might be needed.
 
 ##### 3. Using parentheses instead of brackets
-Functions in R are denoted by character strings followed by parentheses (for example, "list.files()"), whereas a specific index within a data structure (such as arrays, lists, and vectors) are denoted by character strings followed by brackets (for example, "test.results[1]"). So if parentheses are used instead of brackets on am R data structure, you will get a "could not find function" error.
+Functions in R are denoted by character strings followed by parentheses (for example, "list.files()"), whereas a specific index within a data structure (such as arrays, lists, and vectors) are denoted by character strings followed by brackets (for example, "test.results[1]"). 
+
+For example, if I enter:
+```
+mean(data.sample)
+```
+I will get an average of the elements contained in the vector "data.sample". If I instead type:
+```
+mean[data.sample]
+```
+R will interpret "mean" as the data vector, and try (and fail) to find the entry at index "data.sample".
+
+In the alternate case, if I enter:
+
+```
+data.sample[1]
+```
+This will return the first entry in "data.sample". If I instead type:
+```
+data.sample(1)
+```
+R will try to find a function named "data.sample" and run this function with 1 as an input. As there is not data.sample function, you will get a "could not find function" error.
 
 ### If the script crashes *after* data export directory names are printed
 A data export might be faulty. Check for last directory printed for errors (the most common culprits are listed below), fix any identified issues, and re-run the script. NOTE: Sometimes there is no problem with the data export, the script just crashed (This would be the "machine just hates you" case referenced earlier). If you cannot find an error in the data export, re-run the script, and see if the issue persists.
