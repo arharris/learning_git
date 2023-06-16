@@ -76,7 +76,7 @@ If you get an error message reading "No such file or directory," the most likely
 If you get an error message reading "could not find function," this means that R does not recognize a called function. There are a few common causes:
 
 ##### 1. A module script didn't load properly
-To keep the data consolidation script clean, many functions are contained in two separate module scripts: "consolidate_data_exports_functions.R" and "generic_functions.R". If either of these scripts did not load properly (this would be the first two lines of non-commented code, the "source" command), then thid error might happen. Check the file paths on the source commands.
+To keep the data consolidation script clean, many functions are contained in two separate module scripts: "consolidate_data_exports_functions.R" and "generic_functions.R". If either of these scripts did not load properly (this would be the first two lines of non-commented code, the "source" command), then this error might happen. Check the file paths on the source commands.
 
 ##### 2. A library didn't load properly
 If a library doesn't load properly, any functions within the library will be unavailable. Try running the appropriate load.libraries command again, otherwise more investigation might be needed.
