@@ -33,7 +33,7 @@ The only inputs required for this software are the test report export files. Bel
 |   |   |   ├── BatteryInfo.csv
 |   |   |   ├── BatteryInspection.csv
 |   |   |   ├── Components.csv
-|   ├── PICO_SMQ_QTM_Flexiway_SolarMuscleFlex_10112015
+|   ├── PICO_SMQ_QTM_SolarCompany_SolarProduct_10112015
 |   |   ├── BatteryExport
 |   |   |   ├── BatteryExportData.csv
 |   |   ├── VisualScreeningExport
