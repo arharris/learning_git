@@ -9,7 +9,7 @@ This suite of scripts is designed to take the individual product testing results
 Currently, script must be implemented in an R instance (RStudio is ideal, but if you are comfortable with the base R GUI, that works as well). If using the base R GUI, you will need to open up a text editor (such as VIM, BBEdit, or Notepad++) to access the .R file.
 
 ### 2. Check the hard-coded file paths
-There are a few places where consolidate_data_exports.R relies hard-coded file paths to access key functions and data resources:
+There are a few places where consolidate_data_exports.R relies on hard-coded file paths to access key functions and data resources:
 1. Immediately following the version notes at the start of the file, there is a section labeled "LOAD FUNCTIONS USED IN THIS SCRIPT". There are two lines issuing "source()" commands, with file paths pointing to "generic_functions.R" and "consolidate_data_exports_functions.R". 
 2. In the next section, labeled "COMMAND LINE OPTIONS", the variables "main.dir" and "output.file.dir" point to the "All_Data_Exports" and "Verasol Data Analysis" directories, respectively. 
 3. In the next section, labeled "CREATE A LABS LIST", the variable "labs.on.file" is pointed to file "labs.csv".
