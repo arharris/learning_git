@@ -61,7 +61,7 @@ lighting.global.database[['<test name<Sometimes Markdown is dumb>>']]
 For example:
 lighting.global.database[['Battery']]
 
-The columns of each test-specific data table are directly taken from the test report spreadsheet, 
+The columns of each test-specific data table are directly taken from the test report spreadsheet.
 
 ## Common Troubleshooting
 Below are some troubleshooting techniques for common errors. Additional investigation may be required to find and fix certain issues.
