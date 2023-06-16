@@ -70,7 +70,7 @@ Below are some troubleshooting techniques for common errors. Additional investig
 This means that the error was not caused by a problematic data export directory, so the problem is somewhere in the script. Here are some common causes:
 
 #### A file path is incorrect
-If you get an error message reading "No such file or directory," the most likely culprit is a bad file path. Check the file name specified - you may also want to check any files paths stored in variables (i.e. "main.dir", "output.file.dir") to makesure there are no errors. If the issue persists, more detailed invrstigation will be needed.
+If you get an error message reading "No such file or directory," the most likely culprit is a bad file path. Check the file name specified - you may also want to check any files paths stored in variables (i.e. "main.dir", "output.file.dir") to make sure there are no errors. If the issue persists, more detailed investigation will be needed.
 
 #### Function not found 
 If you get an error message reading "could not find function," this means that R does not recognize a called function. There are a few common causes:
